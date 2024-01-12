@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="tituloDoc">ServiVENT-Documento</title>
+    <link rel="stylesheet" href="css/estilos_doc.css">
+    
+    
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+    <script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+    <script type="text/javascript" src="js/imprimir.js"></script>
+    
+</head>
+
+<body class="body">
+
+    <div class="content">
+
+        <div class="doc_btn">
+            
+            <div >
+                <a id="btnSave" href="#" style="background-color: #10c98b;" onclick="savePDF()" class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="#FFFFFF" class="bi bi-cloud-download-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 0a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 4.095 0 5.555 0 7.318 0 9.366 1.708 11 3.781 11H7.5V5.5a.5.5 0 0 1 1 0V11h4.188C14.502 11 16 9.57 16 7.773c0-1.636-1.242-2.969-2.834-3.194C12.923 1.999 10.69 0 8 0m-.354 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 14.293V11h-1v3.293l-2.146-2.147a.5.5 0 0 0-.708.708z"/>
+                  </svg> Guardar</a>
+                <a id="btnPrint" href="#" style="background-color: #0d6efd;" onclick="printPDF()" class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="#FFFFFF" class="bi bi-printer-fill" viewBox="0 0 16 16">
+                    <path d="M5 1a2 2 0 0 0-2 2v1h10V3a2 2 0 0 0-2-2zm6 8H5a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1"/>
+                    <path d="M0 7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-1v-2a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v2H2a2 2 0 0 1-2-2zm2.5 1a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1"/>
+                  </svg> Imprimir</a>
+            </div>
+        </div>
+
+        <div class="doc">            
+            
+            <div class="card" id="card">
+                
+                <div id="divImprimir" class="contenedor_card">          
+
+                   <div class="info_registro">
+
+                        <div id="content_info_registro" class="content_info_registro">
+
+                            <div class="cliente">
+                                <div><b>Codigo: </b><label id="codigoCliente">C-0001</label></div>
+                                <div><b>Proveedor: </b><label id="nombreCliente">Ronny Chavez Cuellar</label></div>
+                                <div><b>Telefono: </b><label id="telefonoCliente">591-77809269</label></div>
+                            </div>
+
+                            <div class="registro">
+                                <h2 >PEDIDO</h2>
+                                <P id="fechaRegistro">3/27/2023 11:28:04 AM</P>
+                                <div><b>Usuario: </b><label id="usuario">Ronny Chavez Cuellar</label></div>
+                                
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="info_tabla">
+                        <table class="tabla_producto" id="tabla_producto">
+                            <tr>
+                                <th style="width: 2%;">Can.</th>                                
+                                <th style="width: 13%;">Codigo</th>
+                                <th style="width: 40%;">Producto</th>
+                                <th style="width: 10%;">Precio</th>
+                                <th style="width: 10%;">Total</th>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                    <div class="info_detalles">
+
+                        <div class="observaciones">
+                        
+                        </div>
+
+                        <div id="precios" class="precios">                            
+                            
+                            <div id="colum_total" class="colum_total">
+                                <b id="tTotal">TOTAL: </b><span class="colum_total" ><b id="total">445</b> </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="info_pagos">
+
+                        <div class="pagos">
+
+                            <table class="tabla_pagos" id="tabla_pagos">
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+                    
+
+                </div>
+                    
+              
+                
+            </div>
+            
+
+        </div>
+
+    </div>
+
+    
+    <script src="js/pedidos.js"></script>
+    
+    
+
+</body>
+
+</html>
